@@ -1,0 +1,39 @@
+# Binary Search to check if a customer account ID exists
+
+
+practicle 1:binary search
+
+
+# Sorted list of customer account IDs
+account_ids = [1001, 1002, 1003, 1004, 1005, 1006, 1007]
+
+# Input account ID to search
+target = int(input("Enter customer account ID: "))
+
+# Binary Search
+low = 0
+high = len(account_ids) - 1
+found = False
+
+while low <= high:
+    mid = (low + high) // 2
+
+    if account_ids[mid] == target:
+        found = True
+        break
+    elif account_ids[mid] < target:
+        low = mid + 1
+    else:
+        high = mid - 1
+
+# Output
+if found:
+    print("Customer account ID exists.")
+else:
+    print("Customer account ID does not exist.")
+
+output:
+Enter customer account ID: 1004
+Customer account ID exists.
+PS C:\Users\ADMIN\Desktop\samiksha 2215> 
+PS C:\Users\ADMIN\Desktop\samiksha 2215> 
